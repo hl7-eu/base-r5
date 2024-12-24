@@ -41,8 +41,11 @@ dependencies:
   hl7.fhir.uv.ips: current
   [r4-init]
   hl7.fhir.extensions.r5: 4.0.1
+  hl7.fhir.eu.extensions: current
   [r4-end]
-  hl7.fhir.eu.extensions: 0.1.x
+  [r5-init]
+  hl7.fhir.eu.extensions.r5: current
+  [r5-end]
   # eu.terminology.ehdsi: 0.1.0
 
 #   hl7.fhir.us.mcode:
@@ -65,8 +68,6 @@ dependencies:
 pages:
   index.md:
     title: Home
-  background.xml:
-    title: Downloads
   downloads.xml:
     title: Useful Downloads
   copyright.md:

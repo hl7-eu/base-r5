@@ -16,4 +16,4 @@ Description: "This profile specifies how the HL7 FHIR Organization resource shou
 Invariant: name-or-identier
 Description: "identifier or name SHALL be present"
 Severity: #error
-Expression: ".identifier.exists() or name.exists()"
+Expression: "identifier.exists() or name.exists()"
