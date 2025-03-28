@@ -33,18 +33,3 @@ This guide is published for two versions of HL7 FHIR:
 - **HL7 FHIR R4 Base IG** (hl7.fhir.eu.base.r4). Published at [this link](https://build.fhir.org/ig/hl7-eu/base).
 - **HL7 FHIR R5 Base IG** (hl7.fhir.eu.base.r5). This Guide.
 
-### Dependencies
-
-{% include dependency-table.xhtml %}
-
-### Cross Version Analysis
-
-{% include cross-version-analysis.xhtml %}
-
-### Global Profiles
-
-{% include globals-table.xhtml %}
-
-### IP Statements
-
-{% include ip-statements.xhtml %}
