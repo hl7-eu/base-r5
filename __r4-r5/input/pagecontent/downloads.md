@@ -18,10 +18,22 @@ These files should be the first choice whenever generating any implementation ar
 
 There are also specific packages for the R4 and R4B FHIR specifications:
 
+[r4-init]
+#### R4-specific NPM Package and Definitions
+
+- [R4 NPM Package](package.r4.tgz)
+
+#### R4B-specific NPM Package and Definitions
+
+- [R4B NPM Package](package.r4b.tgz)
+
+[r4-end]
+[r5-init]
 #### R5-specific NPM Package and Definitions
 
 - [R5 NPM Package](package.tgz)
 
+[r5-end]
 
 ### Examples
 

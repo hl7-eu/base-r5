@@ -3,7 +3,7 @@ Parent: Patient
 Id: patient-eu
 Title:    "Patient (EU base)"
 Description: """This profile specifies how the HL7 FHIR Patient resource should be used for conveying commonly used concepts in the European context."""
-* insert SetFmmandStatusRule (1, draft)
+* insert SetFmmandStatusRule (2, trial-use)
 * extension contains
     $patient-birthPlace named birthPlace 0..1 and
     $sexForClinicalUse named sex-for-clinical-use 0..* and // from Lab Report
@@ -33,7 +33,7 @@ Description: """This profile specifies how the HL7 FHIR Patient resource should 
   * ^short = "The date of birth for the patient"
 * address only AddressEu // MS according to IPS
 * contact
-  * relationship only $CodeableConcept-uv-ips
+  *  relationship ^short = "Contact relationship"
   // include additonal value sets when they are defined
   * address ^short = "Contact person address"
   * address only AddressEu
