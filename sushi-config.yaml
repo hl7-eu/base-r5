@@ -1,12 +1,12 @@
-# id: hl7.fhir.eu.eu-laboratory
-id: hl7.fhir.eu.base.r5
+# Check the link to the r4 and r5 versions
+id: hl7.fhir.eu.r5.base
+canonical: http://hl7.eu/fhir/base/r5
+fhirVersion: 5.0.0 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 title: HL7 Europe Base and Core FHIR IG
-canonical: http://hl7.eu/fhir/base
 name:  Hl7EuBaseIg
 description: This guide collects base and core profiles to be used in the European context. It also includes common artifacts, such as the profiles describing the European Health Insurance Card.
 status: active # draft | active | retired | unknown
 version: 0.0.1 #
-fhirVersion: 5.0.0 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2024+
 releaseLabel: ballot # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
 # license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
@@ -24,7 +24,7 @@ copyright: >-
 #
 dependencies:
   # hl7.fhir.uv.ips: current
-  hl7.fhir.eu.extensions.r5: current
+  hl7.fhir.eu.r5.extensions: 0.1.1
   # eu.terminology.ehdsi: 0.1.0
 #   hl7.fhir.us.mcode:
 #     id: mcode
@@ -200,13 +200,13 @@ resources:
 #    description: Proposed relationship between the statuses used in the DiagnosticReport resource and that used for the Composition.
 #------------ Logical Models -------------
   Patient/patient-eu-core-example:
-    exampleCanonical: http://hl7.eu/fhir/base/StructureDefinition/patient-eu
+    exampleCanonical: http://hl7.eu/fhir/base/r5/StructureDefinition/patient-eu
   Practitioner/practitioner-eu-core-example:
-    exampleCanonical: http://hl7.eu/fhir/base/StructureDefinition/practitioner-eu
+    exampleCanonical: http://hl7.eu/fhir/base/r5/StructureDefinition/practitioner-eu
   PractitionerRole/practitionerRole-eu-core-example :
-    exampleCanonical: http://hl7.eu/fhir/base/StructureDefinition/practitionerRole-eu
+    exampleCanonical: http://hl7.eu/fhir/base/r5/StructureDefinition/practitionerRole-eu
   Organization/organization-eu-core-example :
-    exampleCanonical: http://hl7.eu/fhir/base/StructureDefinition/organization-eu
+    exampleCanonical: http://hl7.eu/fhir/base/r5/StructureDefinition/organization-eu
 #  StructureDefinition/Subject:
 #    name: A.1.1, A.1.2 - Subject of care
 #    description: Patient or Subject of care. Sections A.1.1 and A.1.2 of the eHN guideline.
