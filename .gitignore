@@ -36,3 +36,12 @@ Thumbs.db
 ################
 
 /scripts/config.json
+
+# Submodules   #
+################
+__r4-r5
+.gitmodules
+
+# log files    #
+################
+*.log
