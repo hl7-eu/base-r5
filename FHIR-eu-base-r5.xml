@@ -14,6 +14,7 @@
 <artifact id="ValueSet/oid-ehicPersonalId" key="ValueSet-oid-ehicPersonalId" name="EHIC Personal ID (system IDs - oid)"/>
 <artifact id="ValueSet/uri-ehicPersonalId" key="ValueSet-uri-ehicPersonalId" name="EHIC Personal ID (system IDs - uri)"/>
 <artifact id="Coverage/EhicExampleIt" key="Coverage-EhicExampleIt" name="EhicExampleIt"/>
+<artifact id="StructureDefinition/EHIC" key="StructureDefinition-EHIC" name="European Health Insurance Card"/>
 <artifact id="BodyStructure/example-body-structure-eu" key="BodyStructure-example-body-structure-eu" name="Example Body Structure"/>
 <artifact id="Organization/organization-eu-core-example" key="Organization-organization-eu-core-example" name="Example Organization"/>
 <artifact id="Patient/patient-eu-core-example" key="Patient-patient-eu-core-example" name="Example Patient"/>
