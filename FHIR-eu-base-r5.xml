@@ -18,7 +18,7 @@
 <artifact id="StructureDefinition/coverage-eu-ehic" key="StructureDefinition-coverage-eu-ehic" name="Coverage (EHIC)"/>
 <artifact deprecated="true" id="StructureDefinition/Coverage-eu-ehic" key="StructureDefinition-Coverage-eu-ehic" name="Coverage: EHIC"/>
 <artifact id="ValueSet/uri-ehicCardId" key="ValueSet-uri-ehicCardId" name="EHIC Card ID (system IDs - uri)"/>
-<artifact id="ValueSet/oid-ehicPersonalId" key="ValueSet-oid-ehicPersonalId" name="EHIC Personal ID (system IDs - oid)"/>
+<artifact deprecated="true" id="ValueSet/oid-ehicPersonalId" key="ValueSet-oid-ehicPersonalId" name="EHIC Personal ID (system IDs - oid)"/>
 <artifact id="ValueSet/uri-ehicPersonalId" key="ValueSet-uri-ehicPersonalId" name="EHIC Personal ID (system IDs - uri)"/>
 <artifact id="Coverage/EhicExampleIt" key="Coverage-EhicExampleIt" name="EHIC – Italy"/>
 <artifact id="StructureDefinition/EHIC" key="StructureDefinition-EHIC" name="European Health Insurance Card"/>
@@ -26,7 +26,7 @@
 <artifact id="StructureDefinition/EHDSHealthProfessional" key="StructureDefinition-EHDSHealthProfessional" name="Health professional model"/>
 <artifact id="StructureDefinition/EHDSHumanName" key="StructureDefinition-EHDSHumanName" name="Human name model"/>
 <artifact deprecated="true" id="StructureDefinition/HumanName-eu" key="StructureDefinition-HumanName-eu" name="HumanName (Eu)"/>
-<artifact id="ValueSet/iso-ehicCountryCode" key="ValueSet-iso-ehicCountryCode" name="ISO 3166 - EHIC Country Codes"/>
+<artifact deprecated="true" id="ValueSet/iso-ehicCountryCode" key="ValueSet-iso-ehicCountryCode" name="ISO 3166 - EHIC Country Codes"/>
 <artifact id="StructureDefinition/location-eu" key="StructureDefinition-location-eu" name="Location (EU base)"/>
 <artifact id="Location/example-location" key="Location-example-location" name="Location Example"/>
 <artifact id="StructureDefinition/EHDSLocation" key="StructureDefinition-EHDSLocation" name="Location model"/>
@@ -40,7 +40,8 @@
 <artifact id="StructureDefinition/EHDSPatientAnimal" key="StructureDefinition-EHDSPatientAnimal" name="Patient Animal model"/>
 <artifact id="Patient/patient-eu-core-example" key="Patient-patient-eu-core-example" name="Patient Example"/>
 <artifact id="StructureDefinition/EHDSPatient" key="StructureDefinition-EHDSPatient" name="Patient model"/>
-<artifact id="StructureDefinition/patient-animal-eu" key="StructureDefinition-Patient-animal-eu" name="Patient: Animal"/>
+<artifact deprecated="true" id="StructureDefinition/Patient-animal-eu" key="StructureDefinition-Patient-animal-eu" name="Patient: Animal"/>
+<artifact id="StructureDefinition/patient-animal-eu-core" key="StructureDefinition-patient-animal-eu-core" name="Patient: Animal (EU core)"/>
 <artifact id="StructureDefinition/practitioner-eu" key="StructureDefinition-practitioner-eu" name="Practitioner (EU base)"/>
 <artifact id="StructureDefinition/practitioner-eu-core" key="StructureDefinition-practitioner-eu-core" name="Practitioner (EU core)"/>
 <artifact id="Practitioner/practitioner-eu-core-example" key="Practitioner-practitioner-eu-core-example" name="Practitioner Example"/>
