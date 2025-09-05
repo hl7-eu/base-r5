@@ -6,6 +6,7 @@ Title:      "Address (EU)"
 Description: """This profile extends the Address data type for supporting streetname, housenumber and postal box."""
 //-------------------------------------------------------------------------------------------
 * insert SetFmmandStatusRule ( 2, draft)
+* line ^comment = "When extensions are used for providing structured information the line element SHOULD be populated with a human readable representation of the line."
 * line.extension ^slicing.discriminator.type = #value
 * line.extension ^slicing.discriminator.path = "url"
 * line.extension ^slicing.rules = #open
