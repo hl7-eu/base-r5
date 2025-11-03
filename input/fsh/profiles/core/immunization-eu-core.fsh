@@ -8,13 +8,10 @@ Description: """This profile sets minimum expectations for the Immunization reso
 * ^experimental = false
 * ^purpose = "This profile constrains the Immunization resource for the purpose of this guide."
 // * insert ImposeProfile($Immunization-uv-ips, 0)
-* basedOn
-// check preadoption of R5 element
-// Check if the R5 now works...
-// extension only for the R5 version
-* extension contains ImmunizationAdministeredProduct named administeredProduct 0..1
+/* * extension contains ImmunizationAdministeredProduct named administeredProduct 0..1
 * extension[administeredProduct].extension[concept]
-* extension[administeredProduct].extension[reference].valueReference only Reference ( MedicationEuCore )
+* extension[administeredProduct].extension[reference].valueReference only Reference ( MedicationEuCore ) */
+* basedOn
 /* FIX THE ISSUE WITH CODEABLE REFERENCE
 * extension contains $immunization-administeredProduct-r5 named administeredProduct 0..1
 * extension[administeredProduct].extension[concept]
