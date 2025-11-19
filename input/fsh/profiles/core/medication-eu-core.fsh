@@ -20,11 +20,15 @@ This profile is adapted from the MPD work."""
 * extension[unitOfPresentation] ^short = "Unit of presentation of the product (e.g. tablet, vial, ampoule, etc)"
 * extension contains MedicationPackageType named packageType 0..1
 * extension[packageType] ^short = "Type of container. This information is more relevant in cases when the packaging has an impact on administration of the product (e.g. pre-filled syringe)"
+* batch
+  * lotNumber ^short = "Lot Number"
+  * expirationDate ^short = "Expiration Date"
 * extension contains $ihe-ext-medication-device named device 0..* // device
 * extension[device] ^short = "Device, typically an administration device, included in the product."
 * extension[device].extension[device].valueCodeableConcept from $eHDSIPackage (example)
 * totalVolume // MS // item.amount; packSize
-  * ^short = "Total volume or number of package items inside a package. This element should not contain overall prescribed amount, but describe the product itself. In case of complex packages, this element could be left empty, and number of different items could be indicated in the nested Medications." //packSize (almost)
+  * ^short = "Total volume or number of package items inside a package."
+  * ^definition = """Total volume or number of package items inside a package. This element should not contain overall prescribed amount, but describe the product itself. In case of complex packages, this element could be left empty, and number of different items could be indicated in the nested Medications.""" //packSize (almost)
 * ingredient
   * item only CodeableReference (Substance or MedicationEuCore)
     * ^short = "Substance (Substance resource or concept from terminology) or a medicinal product (Medication resource or concept from terminology). Medicinal product can be an ingredient in case of extemporal medications or combination packs (e.g Creme + 6 tablets)" 
@@ -42,4 +46,4 @@ This profile is adapted from the MPD work."""
   * ^binding.additional.purpose = #candidate
   * ^binding.additional.valueSet = $eHDSIDoseForm
   * ^binding.additional.documentation = """MyHealth@EU crossborder value set for dose forms. Based on EDQM Standard Terms.""" 
-* marketingAuthorizationHolder // MS
+* marketingAuthorizationHolder ^short = "Marketing Authorization Holder"// MS
