@@ -12,11 +12,6 @@ This profile is adapted from the MPD work."""
 // * status ^short = "Current state of the dispensation"
 * subject only Reference( PatientEuCore )
 * status ^short = "State of the medication"
-* statusReason ^short = "Reason for the 'exception' statuses of the medication"
-* category ^short = "Type of intended use"
-* dosage ^short = "	Details of how medication is/was taken or should be taken."
-  * route //copy the additional bindign from the ips
-* effectivePeriod ^short = "Period when the medication is/was or should be used."
 * medication only CodeableReference(MedicationEuCore)
-* medication from MedicationsUvIps (example)
+* medication from $medication-uv-ips (example) 
 * reason.concept ^short = "Coded reason for use"
