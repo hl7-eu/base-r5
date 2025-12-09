@@ -89,7 +89,7 @@ pages:
   map-ehdstelecom.html:
      title: EHDSTelecom to FHIR ContactPoint Mapping
   map-ehdsalert.html:
-     title: EHDSAlert to FHIR Flag / Alert Mapping
+     title: EHDSAlert to FHIR Flag Mapping
   map-ehdsallergyintolerance.html:
      title: EHDSAllergyIntolerance to FHIR AllergyIntolerance Mapping
   map-ehdscondition.html:
@@ -100,6 +100,8 @@ pages:
      title: EHDSImmunisation to FHIR Immunization Mapping
   map-ehdsdocument.html:
      title: EHDSDocument to FHIR Composition Mapping
+  map-ehdsdocument-report.html:
+     title: EHDSDocument to FHIR DiagnosticReport Mapping
   map-ehdsmedication.html:
      title: EHDSMedication to FHIR Medication Mapping
   map-ehdsmedicationstatement.html:
@@ -138,6 +140,7 @@ parameters: #see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Pa
   apply-version: true
   show-inherited-invariants: true
   usage-stats-opt-out: true
+  ips-comparison: 2.0.0
   # excludexml: false
   # excludejson: false
   # excludettl: true
@@ -304,10 +307,11 @@ groups:
         - StructureDefinition/bodyStructure-eu-core
         - StructureDefinition/location-eu-core
    EuCoreProfilesSTU2:
-      name:  HL7 Europe Core Profiles (STU 2 - WIP)
+      name:  HL7 Europe Core Profiles (STU 2)
       description: Core profiles for the European context.
       resources:
         - StructureDefinition/allergyIntolerance-eu-core
+        - StructureDefinition/composition-eu-core
         - StructureDefinition/condition-eu-core
         - StructureDefinition/flag-eu-core
         - StructureDefinition/immunization-eu-core
