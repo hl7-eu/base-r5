@@ -21,7 +21,7 @@ This profile is adapted from the MPD work."""
 * category contains intendedUse 0..*
 * category[intendedUse] from medicationIntendedUseEuVs
 */
-* dosage ^short = "	Details of how medication is/was taken or should be taken."
+* dosage ^short = "Details of how medication is/was taken or should be taken."
   * route //copy the additional bindign from the ips
 * effectivePeriod ^short = "Period when the medication is/was or should be used."
 * medication only CodeableReference(MedicationEuCore)

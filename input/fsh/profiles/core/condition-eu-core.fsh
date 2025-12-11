@@ -5,6 +5,7 @@ Title: "Condition (EU core)"
 Description: """This profile sets minimum expectations for the Condition resource common to most of the use cases."""
 // * insert ImposeProfile ( $Condition-uv-ips, 0 )  // Check if this is appropriate (see MS support)
 // follow the same apporach of lab for collection or add laterality to the bodySite ?
+* insert SetFmmandStatusRule (1, draft)
 * extension contains $condition-assertedDate named assertedDate 0..1
 * extension[assertedDate].valueDateTime ^short = "Date and time of the diagnosis assertion"
 * extension contains $artifact-relatedArtifact named relatedArtifact 0..*
@@ -12,19 +13,10 @@ Description: """This profile sets minimum expectations for the Condition resourc
 * category ^short = "Category" // to be updated
 * severity from $condition-severity (preferred)
 * code 1..1 
-* code from $problems-uv-ips (preferred) // CHANGE value set 
-  * ^definition = "The problem code specifies the problem. Depending on the setting, different code systems can be used. The ProblemCodelist provides an overview of the possible code systems."
-  * ^binding.description = "Valueset to describe the actual problem experienced by the patient"
-  * ^binding.extension[+].extension[0].url = "purpose"
-  * ^binding.extension[=].extension[=].valueCode = #candidate
-  * ^binding.extension[=].extension[+].url = "valueSet"
-  * ^binding.extension[=].extension[=].valueCanonical = "http://terminology.ehdsi.eu/ValueSet/eHDSIIllnessandDisorder"
-  * ^binding.extension[=].extension[+].url = "documentation"
-  * ^binding.extension[=].extension[=].valueMarkdown = "Additional conformance binding to a problem code when ICD-10 or Orphanet codes are used."
-  * ^binding.extension[=].extension[+].url = "shortDoco"
-  * ^binding.extension[=].extension[=].valueString = "For cross border data exchange"
-  * ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
-  * ^binding.description = "Valueset to describe the actual problem experienced by the patient"
+* code from $problems-uv-ips (preferred) 
+  * ^binding.additional.purpose = #candidate
+  * ^binding.additional.valueSet = "http://terminology.ehdsi.eu/ValueSet/eHDSIIllnessandDisorder"
+  * ^binding.additional.documentation = "Additional conformance binding to a problem code when ICD-10 or Orphanet codes are used."
 * bodySite from SNOMEDCTBodyStructures (preferred)
   * extension contains $bodySite-reference named bodySite 0..1
   * extension[bodySite].valueReference only Reference(BodyStructureEuCore)  
