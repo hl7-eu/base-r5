@@ -25,8 +25,7 @@ copyright: >-
 #
 dependencies:
   # hl7.fhir.uv.ips: current
-  # hl7.fhir.eu.extensions.r5 to be changed to 1.2.0 when published
-  hl7.fhir.eu.extensions.r5: 0.1.1
+  hl7.fhir.eu.extensions.r5: 1.2.0
   ihe.pharm.mpd: 1.0.0-comment-2
   hl7.fhir.extensions.r5: 5.0.0
 #   hl7.fhir.us.mcode:
