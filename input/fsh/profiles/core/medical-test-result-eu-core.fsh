@@ -32,14 +32,15 @@ Description: """This profile sets minimum expectations for the Observation resou
 * effective[x] 1..
 * effective[x] only dateTime or Period
   * ^requirements = "EHDSObservation.observationDate[x]"
-* issued ^short = "Date/Time this result was made available"
+* issued
   * ^requirements = "EHDSObservation.header.authorship.datetime"
 * performer only Reference(PractitionerEuCore or PractitionerRoleEuCore or OrganizationEuCore)
   * ^requirements = "EHDSObservation.header.performer"
-//TODO: Cardinality in Model is 1..1, datatypes in xt-ehr model only valueString, valueQuantity, valueRange, valueCodeableConcept
+//TODO: datatypes in xt-ehr model only valueString, valueQuantity, valueRange, valueCodeableConcept
 * value[x]
   * ^requirements = "EHDSObservation.result.value[x]"
-// TODO: is uncertainty a modifierExtension? Also relevant for Ratio, Range, integer 
+// TODO: is uncertainty a modifierExtension? Also relevant for Ratio, Range, integer
+// TODO: ask for scope change on extension
 * valueQuantity
   * extension contains 
     $iso21090-uncertainty named uncertainty 0..1
@@ -58,19 +59,19 @@ Description: """This profile sets minimum expectations for the Observation resou
 * method
   * ^requirements = "EHDSObservation.method"
 //TODO: specimen is not part of the EHDSObservation model but needed for lab observations
-//TODO: device is not part of the EHDSObservation model but might be needed for lab observations
+* device only Reference(Device or DeviceMetric)
+  * ^requirements = "Device information for laboratory observations"
 * referenceRange
   * ^requirements = "EHDSObservation.referenceRange"
 * hasMember only Reference(MedicalTestResultEuCore)
   * ^requirements = "EHDSObservation.hasMember[x]"
-//TODO: found ImagingStudyEuImaging in the ig, but no definition  
 * derivedFrom only Reference(MedicalTestResultEuCore or ImagingStudy)
   * ^requirements = "EHDSObservation.derivedFrom[x]"
 * component
   * ^requirements = "EHDSObservation.component"
   * code from LaboratoryResultStandardEuVs (preferred)
     * ^requirements = "EHDSObservation.component.code"
-//TODO: Cardinality in Model is 1..1, datatypes in xt-ehr model only valueString, valueQuantity, valueRange, valueCodeableConcept
+//TODO: datatypes in xt-ehr model only valueString, valueQuantity, valueRange, valueCodeableConcept
   * value[x]
     * ^requirements = "EHDSObservation.component.result.value[x]"
   * valueQuantity

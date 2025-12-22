@@ -23,10 +23,9 @@ Description: """This profile sets minimum expectations for the Immunization reso
   * ^binding.additional.documentation = "Additional conformance binding to the cross-border vaccines value set."
 * patient only Reference(PatientEuCore)
 * occurrence[x] ^short = "Date of vaccination"
-// TO BE ACTIVATED WHEN EXTENSIONS WILL BE PUBLISHED
-// * occurrenceDateTime
-//  * extension contains PeriodsOfLife named periodOfLife 0..1
-//  * extension[periodOfLife].valueCodeableConcept from PeriodsOfLifeEuVs (preferred)
+* occurrenceDateTime
+  * extension contains PeriodsOfLife named periodOfLife 0..1
+  * extension[periodOfLife].valueCodeableConcept from PeriodsOfLifeEuVs (preferred)
 * location only Reference(LocationEuCore)
 * manufacturer ^short = "Vaccine manufacturer/MAH"
 * lotNumber ^short = "Batch/lot number"
