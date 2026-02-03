@@ -42,7 +42,7 @@ Description: "Example of a Laboratory Report DiagnosticReport conforming to the 
 * id = "5679723c-4fae-4ba7-9f09-5438a827bfda"
 * identifier.system = "http://example.org/composition-ids"
 * identifier.value = "c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju"
-* extension[DiagnosticReportCompositionR5].valueReference = Reference(CompositionLabExample)
+* composition = Reference(CompositionLabExample)
 * status = #registered
 * basedOn = Reference(ServiceRequestExample)
 * category[+] = $loinc#18719-5 "Chemistry studies (set)"
