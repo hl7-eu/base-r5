@@ -2,11 +2,11 @@ Profile: DiagnosticReportEuCore
 Parent: DiagnosticReport
 Id: diagnosticReport-eu-core
 Title:    "DiagnosticReport (EU core)"
-Description: """This profile sets minimum expectations for the DiagnosticReport resource for commonly used EHDS documents."""
+Description: """This profile introduce essential constraints and extensions for the DiagnosticReport resource that apply across multiple use cases."""
 * insert SetFmmandStatusRule (1, draft)
 * . ^short = "Diagnostic Report EU core"
 * . ^definition = "Diagnostic Report EU core"
-* basedOn only Reference ( ServiceRequest)
+* basedOn ^short = "What was requested"
 * status ^short = "Status of the Report"
 * identifier
   * ^comment = "Usually assigned by the Information System of the diagnostic service provider for facilitating the Report search. The order id can be used as one of the Report identifier if only one report is produced for that order."

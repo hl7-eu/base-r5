@@ -3,11 +3,11 @@ Parent: Procedure
 // Parent: ProcedureUvIps
 Id: procedure-eu-core
 Title:    "Procedure (EU core)"
-Description: "This profile represents the constraints applied to the Procedure resource by this guide."
+Description: """This profile introduce essential constraints and extensions for the Procedure resource that apply across multiple use cases."""
 // * insert ImposeProfile ( $Procedure-uv-ips, 0 )  // Check if this is appropriate (see  support)
 * insert SetFmmandStatusRule (1, draft)
-* extension contains $procedure-targetBodyStructure named bodySite 0..1
-* extension[bodySite].valueReference only Reference(BodyStructureEuCore)
+/* * extension contains $procedure-targetBodyStructure named bodySite 0..1
+* extension[bodySite].valueReference only Reference(BodyStructureEuCore) */
 * identifier ^short = "Identifier for the procedure"
 * text ^short = "Textual representation of the procedur"
  // textual representation of the procedure should be provided according to the EHN data set
