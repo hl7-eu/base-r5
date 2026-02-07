@@ -20,7 +20,6 @@ Description: """This profile introduce essential constraints and extensions for 
   * ^binding.additional.valueSet = "http://hl7.org/fhir/uv/ips/ValueSet/whoatc-uv-ips"
   * ^binding.additional.documentation = "Type of the substance/product, allergy or intolerance condition."
 * criticality ^short = "Criticality"
-* patient.reference 1..
 * patient only Reference(PatientEuCore)
 * onsetDateTime ^short = "Onset date"
 * reaction.substance from $eHDSIAllergenNoDrug (example)
