@@ -10,6 +10,10 @@ Description: """This profile introduces essential constraints and extensions for
 * insert SetFmmandStatusRule (1, draft)
 * status ^short = "Immunization status."
 * statusReason ^short = "Reason for not performing."
+* identifier ^short = "Identifier of the immunization"
+* language ^short = "Language of the immunization content"
+* note.text ^short = "Additional notes about the immunization"
+* administeredProduct ^short = "The product that was administered or was to be administered."
 * reason.concept ^short = "Reasons for the administration."
 * informationSource only CodeableReference ( PatientEuCore or PractitionerEuCore or PractitionerRoleEuCore or RelatedPerson or OrganizationEuCore )
 * vaccineCode from $vaccines-uv-ips (preferred)

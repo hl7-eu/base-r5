@@ -8,6 +8,10 @@ Description: """This profile introduces essential constraints and extensions for
 * insert SetFmmandStatusRule (1, draft)
 * ^experimental = false
 * ^purpose = "This profile constrains the Composition resource for the purpose of this guide."
+* event
+  * detail.concept ^short = "Event code"
+  * period ^short = "Event period"
+* language ^short = "Language of the composition content"
 * extension contains
     $information-recipient named informationRecipient 0..* and
     $composition-diagnosticReportReference named diagnosticReport 0..1

@@ -6,8 +6,12 @@ Title:    "Procedure (EU core)"
 Description: """This profile introduces essential constraints and extensions for the Procedure resource that apply across multiple use cases."""
 // * insert ImposeProfile ( $Procedure-uv-ips, 0 )  // Check if this is appropriate (see  support)
 * insert SetFmmandStatusRule (1, draft)
+* reportedReference ^short = "Reported rather than primary record."
+* language ^short = "Language of the procedure"
+* recorder ^short = "The person or organization who recorded the procedure"
 /* * extension contains $procedure-targetBodyStructure named bodySite 0..1
 * extension[bodySite].valueReference only Reference(BodyStructureEuCore) */
+* recorded ^short = "Date when the procedure was recorded"
 * identifier ^short = "Identifier for the procedure"
 * text ^short = "Textual representation of the procedur"
  // textual representation of the procedure should be provided according to the EHN data set

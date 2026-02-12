@@ -6,6 +6,8 @@ Title: "MedicalTestResult (EU core)"
 Description: """This profile introduces essential constraints and extensions for the Observation resource for Medical Test Results that apply across multiple use cases."""
 //-------------------------------------------------------------------------------------------
 * insert SetFmmandStatusRule (1, draft)
+* language ^short = "Language of the observation"
+* specimen ^short = "Specimen used for the observation"
 * identifier
   * ^requirements = "EHDSObservation.header.identifier"
 * triggeredBy.observation only Reference(MedicalTestResultEuCore)
