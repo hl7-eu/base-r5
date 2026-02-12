@@ -3,16 +3,15 @@ Profile:  ImmunizationEuCore
 Parent:   Immunization
 Id:       immunization-eu-core
 Title:    "Immunization (EU core)"
-Description: """This profile introduce essential constraints and extensions for the Immunization resource that apply across multiple use cases."""
+Description: """This profile introduces essential constraints and extensions for the Immunization resource that apply across multiple use cases."""
 //-------------------------------------------------------------------------------------------
 * ^experimental = false
 * ^purpose = "This profile constrains the Immunization resource for the purpose of this guide."
-// * insert ImposeProfile($Immunization-uv-ips, 0)
 * insert SetFmmandStatusRule (1, draft)
 * status ^short = "Immunization status."
 * statusReason ^short = "Reason for not performing."
-// * basedOn
 * reason.concept ^short = "Reasons for the administration."
+* informationSource only CodeableReference ( PatientEuCore or PractitionerEuCore or PractitionerRoleEuCore or RelatedPerson or OrganizationEuCore )
 * vaccineCode from $vaccines-uv-ips (preferred)
   * ^binding.additional.purpose = #candidate
   * ^binding.additional.valueSet = "http://hl7.org/fhir/uv/ips/ValueSet/vaccines-whoatc-uv-ips"
