@@ -16,7 +16,7 @@ Description: """This profile introduces essential constraints and extensions for
 * language ^short = "Language of the condition content"
 * code 1..1 
 * code from $problems-uv-ips (preferred) 
-  * ^binding.additional.purpose = #candidate
+  * ^binding.additional.purpose = #preferred
   * ^binding.additional.valueSet = "http://terminology.ehdsi.eu/ValueSet/eHDSIIllnessandDisorder"
   * ^binding.additional.documentation = "Additional conformance binding to a problem code when ICD-10 or Orphanet codes are used."
 * bodySite from SNOMEDCTBodyStructures (preferred)

@@ -17,11 +17,11 @@ Description: """This profile introduces essential constraints and extensions for
 * reason.concept ^short = "Reasons for the administration."
 * informationSource only CodeableReference ( PatientEuCore or PractitionerEuCore or PractitionerRoleEuCore or RelatedPerson or OrganizationEuCore )
 * vaccineCode from $vaccines-uv-ips (preferred)
-  * ^binding.additional.purpose = #candidate
+  * ^binding.additional.purpose = #preferred
   * ^binding.additional.valueSet = "http://hl7.org/fhir/uv/ips/ValueSet/vaccines-whoatc-uv-ips"
   * ^binding.additional.documentation = "Additional conformance binding to a vaccines value set from the WHO ATC code system for use in specific jurisdictional or other contexts where use of the ATC terminology is preferred."
 
-  * ^binding.additional.purpose = #candidate
+  * ^binding.additional.purpose = #preferred
   * ^binding.additional.valueSet = "http://terminology.ehdsi.eu/ValueSet/eHDSIVaccine"
   * ^binding.additional.documentation = "Additional conformance binding to the cross-border vaccines value set."
 * patient only Reference(PatientEuCore)
@@ -43,7 +43,7 @@ Description: """This profile introduces essential constraints and extensions for
 * performer[administeringCentreOrHp].actor only Reference( OrganizationEuCore or PractitionerRoleEuCore or PractitionerEuCore )
 * protocolApplied.targetDisease from $target-diseases-uv-ips (preferred) // Check Value Set
 * protocolApplied.targetDisease
-  * ^binding.additional.purpose = #candidate
+  * ^binding.additional.purpose = #preferred
   * ^binding.additional.valueSet = "http://terminology.ehdsi.eu/ValueSet/eHDSIIllnessandDisorder"
   * ^binding.additional.documentation = "Additional conformance binding to a diseases value set for use in specific jurisdictional or for cross-border settings."
 * protocolApplied.doseNumber ^short = "Dose Number"
@@ -62,7 +62,7 @@ Description: """This profile defines how to represent Immunization Recommandatio
 * recommendation
   * vaccineCode from http://hl7.org/fhir/uv/ips/ValueSet/vaccines-uv-ips (preferred)
   * vaccineCode ^binding.extension[+].extension[0].url = "purpose"
-  * vaccineCode ^binding.extension[=].extension[=].valueCode = #candidate
+  * vaccineCode ^binding.extension[=].extension[=].valueCode = #preferred
   * vaccineCode ^binding.extension[=].extension[+].url = "valueSet"
   * vaccineCode ^binding.extension[=].extension[=].valueCanonical = "http://hl7.org/fhir/uv/ips/ValueSet/vaccines-whoatc-uv-ips"
   * vaccineCode ^binding.extension[=].extension[+].url = "documentation"

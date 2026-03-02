@@ -42,7 +42,7 @@ Description: """This profile introduces essential constraints and extensions for
     * ^short = "Substance (Substance resource or concept from terminology) or a medicinal product (Medication resource or concept from terminology). Medicinal product can be an ingredient in case of extemporal medications or combination packs (e.g Creme + 6 tablets)" 
 
   * item from $substance-codes (example)
-    * ^binding.additional.purpose = #candidate
+    * ^binding.additional.purpose = #preferred
     * ^binding.additional.valueSet = $eHDSISubstance
     * ^binding.additional.documentation = """MyHealth@EU crossborder value set for substances. Based on EMA SPOR SMS.""" 
 
@@ -54,7 +54,7 @@ Description: """This profile introduces essential constraints and extensions for
 
 * doseForm
   * ^short = "Dose form. For a branded product, this would most likely be authorised dose form, but it could also be administrable dose form. For package items, it could be item's individual dose form." // doseForm
-  * ^binding.additional.purpose = #candidate
+  * ^binding.additional.purpose = #preferred
   * ^binding.additional.valueSet = $eHDSIDoseForm
   * ^binding.additional.documentation = """MyHealth@EU crossborder value set for dose forms. Based on EDQM Standard Terms.""" 
 

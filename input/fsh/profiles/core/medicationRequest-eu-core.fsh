@@ -42,6 +42,6 @@ Description: """This profile introduces essential constraints and extensions for
 * medication only CodeableReference(MedicationEuCore)
 * effectiveDosePeriod ^short = "Period over which the medication should be taken."
 * reason ^short = "Reason or indication for this prescription"
-  * ^binding.additional.purpose = #candidate
+  * ^binding.additional.purpose = #preferred
   * ^binding.additional.valueSet = $eHDSIIllnessandDisorder
   * ^binding.additional.documentation = """MyHealth@EU crossborder value set for diagnoses. Based on WHO ICD 10.""" 
