@@ -66,7 +66,10 @@ See the [**Introduction** page](introduction.html) for detailed explanations of 
 This guide is published for two HL7 FHIR versions:
 
 
+
+
 * **HL7 FHIR R4 Base IG** (hl7.fhir.eu.base). Published at the [HL7 Europe Base R4 page](https://hl7.eu/fhir/base).
 * **HL7 FHIR R5 Base IG** (hl7.fhir.eu.base-r5). This Guide.
+
 
 Both versions are maintained by HL7 Europe and evolve based on community feedback and EHDS requirements.

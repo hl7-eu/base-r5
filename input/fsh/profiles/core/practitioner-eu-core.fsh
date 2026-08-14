@@ -1,4 +1,6 @@
+
 //====== Profiles =====================================
+
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Profile:  PractitionerEuCore
 Parent:   PractitionerEu
@@ -8,9 +10,12 @@ Description: """This profile introduces essential constraints and extensions for
 //-------------------------------------------------------------------------------------------
 * insert SetFmmandStatusRule (2, trial-use)
 /*
+
 */
 * name 1..
 //-------------------------------------------------------------------------------------------
+
+
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Profile:  PractitionerRoleEuCore
 Parent:   PractitionerRoleEu // http://hl7.org/fhir/uv/ips/StructureDefinition/PractitionerRole-uv-ips
@@ -20,6 +25,7 @@ Description: """This profile introduces essential constraints and extensions for
 //-------------------------------------------------------------------------------------------
 * insert SetFmmandStatusRule (2, trial-use)
 /*
+
 */
 * organization only Reference (OrganizationEuCore)
 * practitioner only Reference (PractitionerEuCore)

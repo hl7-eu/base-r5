@@ -3,18 +3,26 @@ Parent: Observation
 Id: medicalTestResult-eu-core
 Title: "Observation: Medical Test Result (EU core)"
 Description: """This profile introduces essential constraints and extensions for the Observation resource for Medical Test Results that apply across multiple use cases."""
+
 * insert SetFmmandStatusRule (2, trial-use)
+
 * language ^short = "Language of the observation"
 * specimen ^short = "Specimen used for the observation"
+
+
 * identifier
   * ^requirements = "EHDSObservation.header.identifier"
+  
 * triggeredBy.observation only Reference(MedicalTestResultEuCore)
   * ^requirements = "EHDSObservation.triggeredBy[x]"
+
 * basedOn
   * ^requirements = "EHDSObservation.order"
 * status
   * ^requirements = "EHDSObservation.header.status"
+
 * category 1..
+
 /*  Removed for the time being based on https://jira.hl7.org/browse/FHIR-55424
  * insert SliceElement( #value, $this )
   * ^requirements = "EHDSObservation has no requirement"
@@ -23,6 +31,7 @@ Description: """This profile introduces essential constraints and extensions for
     vital-signs 0..1
 * category[laboratory] = http://terminology.hl7.org/CodeSystem/observation-category#laboratory
 * category[vital-signs] = http://terminology.hl7.org/CodeSystem/observation-category#vital-signs */
+
 * code from MedicalTestResultCodeEuVs (example)
   * ^requirements = "EHDSObservation.code"
 * subject 1.. 
@@ -41,6 +50,7 @@ Description: """This profile introduces essential constraints and extensions for
   * extension contains $event-performerFunction named performerFunction 0..*
   * extension[performerFunction]
     * ^requirements = "EHDSObservation.performer.function"
+
 //TODO: datatypes in xt-ehr model only valueString, valueQuantity, valueRange, valueCodeableConcept
 * value[x]
   * ^requirements = "EHDSObservation.result.value[x]"
@@ -51,6 +61,7 @@ Description: """This profile introduces essential constraints and extensions for
     $iso21090-uncertainty named uncertainty 0..1
   * extension[uncertainty]
     * ^requirements = "EHDSObservation.result.uncertainty"
+
 * dataAbsentReason
   * ^requirements = "EHDSObservation.dataAbsentReason"
 * interpretation
@@ -59,8 +70,10 @@ Description: """This profile introduces essential constraints and extensions for
   * ^requirements = "EHDSObservation.resultDescription"
 * bodySite
   * ^requirements = "EHDSObservation.anatomicLocation"
+
 * bodyStructure
   * ^requirements = "EHDSObservation.anatomicLocation"
+
 * method
   * ^requirements = "EHDSObservation.method"
 //TODO: specimen is not part of the EHDSObservation model but needed for lab observations
@@ -74,6 +87,7 @@ Description: """This profile introduces essential constraints and extensions for
   * ^requirements = "EHDSObservation.derivedFrom[x]"
 * component
   * ^requirements = "EHDSObservation.component"
+  
   * code from MedicalTestResultCodeEuVs (example)
     * ^requirements = "EHDSObservation.component.code"
 //TODO: datatypes in xt-ehr model only valueString, valueQuantity, valueRange, valueCodeableConcept
@@ -90,6 +104,7 @@ Description: """This profile introduces essential constraints and extensions for
     * ^requirements = "EHDSObservation.component.referenceRange"
   * interpretation
     * ^requirements = "EHDSObservation.component.interpretation"
+
 Invariant: obs-value-1
 Description: "The elements Observation.extension:value-r5 and Observation.value[x] SHALL not be used simultaneously."
 Severity: #error
