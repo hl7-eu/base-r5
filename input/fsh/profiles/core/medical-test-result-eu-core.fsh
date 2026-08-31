@@ -109,3 +109,8 @@ Invariant: obs-value-1
 Description: "The elements Observation.extension:value-r5 and Observation.value[x] SHALL not be used simultaneously."
 Severity: #error
 Expression: "value.empty() or extension('http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.value').empty()"
+
+Invariant: obs-value-2
+Description: "The elements Observation.component.extension:value-r5 and Observation.component.value[x] SHALL not be used simultaneously."
+Severity: #error
+Expression: "value.empty() or extension('http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.component.value').empty()"
