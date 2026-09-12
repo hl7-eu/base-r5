@@ -14,5 +14,5 @@ Description: """This profile introduces essential constraints and extensions for
   * structure from http://hl7.org/fhir/ValueSet/body-site (preferred)
   * qualifier from SiteQualifierEuVs (preferred) 
 
-* morphology from http://hl7.org/fhir/ValueSet/bodystructure-code (preferred)
+* morphology from MorphologyEuVs (preferred)
 // * image 0..0
