@@ -42,8 +42,6 @@ Description: """This profile introduces essential constraints and extensions for
 
 
 * occurrence[x] 1..1
-* occurrenceDateTime
-  * insert PeriodOfLifeExtension
 
 /* * performed[x].extension contains $data-absent-reason named data-absent-reason 0..1
 * performed[x].extension[data-absent-reason] ^short = "performed[x] absence reason"
